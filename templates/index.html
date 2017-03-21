@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="blog-header">
+        <h1 class="blog-title">Recent Blog Post</h1>
+
+      </div>
+<div class="row">
+
+        <div class="col-sm-8 blog-main">
+             {% for post in postlist %}
+          <div class="blog-post">
+            <h2 class="blog-post-title">{{post.title}}</h2>
+            <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+
+            <p>{{post.content}}</p>
+          </div><!-- /.blog-post -->
+        {% endfor %}
+    </div>
+    </div>
+{% endblock %}

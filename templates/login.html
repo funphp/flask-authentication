@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form name="register" class="form" action="{{url_for('login')}}" method="post">
+                {{form.hidden_tag()}}
+                {{wtf.form_field(form.username)}}
+                {{wtf.form_field(form.password)}}
+                {{wtf.form_field(form.remember)}}
+
+                <div class="form-group">
+
+                            <input type="submit" class="btn btn-primay" value="Register">
+
+                    </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
